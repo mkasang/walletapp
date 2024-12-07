@@ -90,14 +90,29 @@ class ProfileScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Image.asset(
-                          'assets/images/chip.png',
-                          height: 40,
-                        ),
                         Icon(
                           Icons.contactless,
                           color: Colors.white.withOpacity(0.8),
                           size: 30,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              'CVV',
+                              style: GoogleFonts.poppins(
+                                fontSize: 12,
+                                color: Colors.white.withOpacity(0.8),
+                              ),
+                            ),
+                            Text(
+                              card!.cvv,
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontSize: 16,
+                                letterSpacing: 2,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -108,7 +123,7 @@ class ProfileScreen extends StatelessWidget {
                         (match) => '${match.group(0)}  ',
                       ),
                       style: GoogleFonts.spaceGrotesk(
-                        fontSize: 22,
+                        fontSize: 20,
                         color: Colors.white,
                         letterSpacing: 2,
                       ),
