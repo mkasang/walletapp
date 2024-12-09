@@ -67,10 +67,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[100],
-      body: SafeArea(
-        child: RefreshIndicator(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.grey[100],
+        body: RefreshIndicator(
           onRefresh: _loadData,
           child: SingleChildScrollView(
             padding: const EdgeInsets.all(16.0),
